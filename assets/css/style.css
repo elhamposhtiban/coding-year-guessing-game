@@ -24,3 +24,14 @@
      padding:3px;
      margin: 10px;
  }
+ input:valid {
+    color: green;
+  }
+  input:invalid {
+    color: red;
+  }
+  .hyphen-input {
+      border-bottom: 2px solid black;
+      width: 15px;
+      background-color: rgb(226, 164, 207) !important;
+  }
