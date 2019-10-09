@@ -1,0 +1,26 @@
+* {
+    font-family: 'Be Vietnam', sans-serif;
+    font-family: 'Lora', serif;
+    font-family: 'Mansalva', cursive;
+ }
+ body {
+     background-color: rgb(131, 64, 92);
+ }
+ .con {
+     /* width:960px;
+     height:960px; */
+     background-color: rgb(226, 164, 207);
+     /* margin:142px 257px 81px 115px; */
+ }
+ h1 {
+     text-align: center;
+     color: bisque;
+ }
+ #box {
+     margin: 85px 50px 50px 59px;
+ }
+ .question {
+     text-align: center;
+     padding:3px;
+     margin: 10px;
+ }
