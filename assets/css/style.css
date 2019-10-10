@@ -3,15 +3,15 @@
     font-family: 'Lora', serif;
     font-family: 'Mansalva', cursive;
  }
+
  body {
      background-color: rgb(131, 64, 92);
  }
+
  .con {
-     /* width:960px;
-     height:960px; */
      background-color: rgb(226, 164, 207);
-     /* margin:142px 257px 81px 115px; */
  }
+
  h1 {
      text-align: center;
      color: bisque;
@@ -21,9 +21,14 @@
     font-size: 30px;
  }
 
+ #image {
+     margin: 23px 40px 25px 420px;
+     height: 200px;
+     border: 7px solid rgb(192, 70, 111);
+ }
  .underscores {
-     text-align: center;
-     font-size: 25px;
+    text-align: center;
+    font-size: 25px;
  }
  .rightGuess {
     text-align: center;
@@ -34,22 +39,16 @@
     font-size: 25px;
 }
 
+.btn {
+    
+    background-color: blueviolet;
+}
+
  #box {
      margin: 85px 50px 50px 59px;
  }
- .question {
-     text-align: center;
-     padding:3px;
-     margin: 10px;
+
+ #tries-text {
+    text-align: center;
+    font-size: 25px;
  }
- input:valid {
-    color: green;
-  }
-  input:invalid {
-    color: red;
-  }
-  .hyphen-input {
-      border-bottom: 2px solid black;
-      width: 15px;
-      background-color: rgb(226, 164, 207) !important;
-  }
