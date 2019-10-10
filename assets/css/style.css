@@ -16,6 +16,24 @@
      text-align: center;
      color: bisque;
  }
+ #question-text {
+    text-align: center;
+    font-size: 30px;
+ }
+
+ .underscores {
+     text-align: center;
+     font-size: 25px;
+ }
+ .rightGuess {
+    text-align: center;
+    font-size: 25px;
+}
+.wrongGuess {
+    text-align: center;
+    font-size: 25px;
+}
+
  #box {
      margin: 85px 50px 50px 59px;
  }

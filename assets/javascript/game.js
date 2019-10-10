@@ -15,59 +15,81 @@ const computerValues = [
     "what year was ASP.net created?",
  ];
     const years = ["1990","1994","1970","1979","1995","1936","1989","1994","1984","2002"]
+    let question =[];
+    // here we add two arrayes computer values and years
+    for( i=0 ; i<computerValues.length; i++)
+    {
+     question [i]= computerValues[i]+ years [i];
+    }
    //computer choose question random
     let randomHint = computerValues[Math.floor(Math.random()*9)];
     const questionText = document.getElementById("question-text");
     questionText.textContent = randomHint;
-    let randomAnwser = years[Math.floor(Math.random()*9)];
+    let randomAnwser =question[Math.floor(Math.random()*9)];
     console.log(randomAnwser);
-// create underscore based on year length
+
 const underScore=[];
 let rightAnswer = [];
-let wrongAswer = [];
+let wrongAnswer = [];
+let underscoreText = [];
+triesText = document.getElementById("tries-text");
+underscoreText = document.getElementsByClassName("underscores");
+ rightguessText =document.getElementsByClassName("rightGuess");
+ wrongguessText =document.getElementsByClassName("wrongGuess");
+// create underscore based on 4 digit length
 let generateUnderscore = () =>
  {
     for( let i=0 ;i<4 ;i++)
     {
     underScore.push ("_");
-  
     }
     return underScore;
  }
-console.log(generateUnderscore());
+//console.log(generateUnderscore());
 //get user guess
 document.addEventListener("keypress",(event) => 
 {
   let keycode = event.keyCode;
+  //change it to digit but type string
   let keypad = String.fromCharCode(keycode);  
+  //console.log(keypad);
  //if user guess is right
  if(randomAnwser.indexOf(keypad)>-1)
  {
    // console.log(true);
    //add to right array
    rightAnswer.push(keypad);
-   //replace underscore with right answer
-   underScore[randomAnwser.indexOf(keypad)] = keypad;
+   //replace underscore with digit of year
+   underScore[randomAnwser.indexOf(keypad)]= keypad;
+   underscoreText[0].innerHTML= underScore.join("");
+   rightguessText[0].innerHTML = rightAnswer;
+   //console.log(rightAnswer);
    if(underScore.join("")=== randomAnwser)
    {
-      alert("you win");
-      const rightguess = document.getElementById("right-guess");
-       rightguess.textContent ="you win!" ;
+      // alert("you win");
    }
-  // console.log(underScore);
-   //console.log(rightAnswer);
+ // console.log(rightAnswer);
 }
  else 
  {
-    wrongAswer.push(keypad);
+    wrongAnswer.push(keypad);
+    wrongguessText[0].innerHTML = wrongAnswer;
+   // console.log(wrongAswer); 
     if(underScore.join("")!== randomAnwser)
-    alert("game over");
-   // console.log(wrongAswer);
+    {
+       for(i=0;i<maxAttemps; i++)
+       {
+         maxAttemps-=
+         triesText[0].innerHTML = maxAttemps;
+       }
+    }
+   // alert("game over");
+    
  }
   
 });
 
- const remainingNumbers = randomHint.length;
+underscoreText[0].innerHTML= generateUnderscore().join("");
 
 // display questions randomly
 
